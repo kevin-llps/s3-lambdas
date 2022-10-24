@@ -1,0 +1,38 @@
+{
+  "Records": [
+      {
+          "eventVersion": "2.1",
+          "eventSource": "aws:s3",
+          "awsRegion": "eu-west-3",
+          "eventTime": "2022-10-24T14:16:15.844Z",
+          "eventName": "ObjectCreated:Put",
+          "userIdentity": {
+              "principalId": "B6MINUP32E4N4S"
+          },
+          "requestParameters": {
+              "sourceIPAddress": "192.110.101.99"
+          },
+          "responseElements": {
+              "x-amz-request-id": "AZ2AGBMNWF0MY6PW",
+              "x-amz-id-2": "0K/9aFMm4awEHMefY0dml3qhyNQFpbm4If+9VgAnvmfEH4pEtBkP6wEH5DVK/ZG7nm0gtYRS0Umq+OHk5be2k+O0Lhvkogb5"
+          },
+          "s3": {
+              "s3SchemaVersion": "1.0",
+              "configurationId": "2a4237ef-e3aa-4384-8f6f-c4edd09638e1",
+              "bucket": {
+                  "name": "my-bucket",
+                  "ownerIdentity": {
+                      "principalId": "A1MINUP32E4N4S"
+                  },
+                  "arn": "arn:aws:s3:::my-bucket"
+              },
+              "object": {
+                  "key": "file.pdf",
+                  "size": 452845,
+                  "eTag": "25e945ba6bbe78a30c05e76c5438befd",
+                  "sequencer": "0013269E2FCA0CE020"
+              }
+          }
+      }
+  ]
+}
