@@ -1,0 +1,4 @@
+titre;type;description;date;heure;email conférencier;participants;entreprise
+AWS Cognito;Talk;Après 2 ans à travailler sur la mise en place de cette solution au PMU, kevin llps nous présentera son retour d'expérience en détaillant les points forts et les points faibles de Cognito.;13/10/2022;19:45:00;speaker-cognito@conference-events.fr;;
+Git;BBL;Présentation du fonctionnement de Git;06/09/2022;12:00:00;speaker-git@conference-events.fr;;MadMax Corp
+JEE;Session pratique;Session pratique JEE;11/04/2023;19:00:00;speaker-jee@conference-events.fr;julien arnaud,mickael dupont;

@@ -1,0 +1,23 @@
+{
+  "name": "send-email-to-speakers-on-s3-put-object-lambda",
+  "version": "1.0.0",
+  "description": "Send email to speakers on S3 Put Object Lambda",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "kevin.llps",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "aws-sdk-client-mock": "^2.0.1",
+    "aws-sdk-client-mock-jest": "^2.0.1",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.245.0",
+    "@aws-sdk/client-sesv2": "^3.245.0",
+    "csv-parse": "^5.3.3"
+  }
+}
