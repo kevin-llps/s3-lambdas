@@ -1,0 +1,36 @@
+service: conference-events
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-bundle
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  memorySize: 256
+  stage: ${opt:stage, 'dev'}
+  region: eu-west-3
+  iamRoleStatements:
+  - Effect: "Allow"
+    Action:
+      - "ses:SendEmail"
+    Resource:
+      - "arn:aws:ses:*"
+  - Effect: "Allow"
+    Action:
+      - "s3:GetObject"
+    Resource:
+      - "arn:aws:s3:::*"
+
+  environment:
+    REGION: ${self:provider.region}
+    SENDER_EMAIL: speaker-cognito@conference-events.fr
+
+functions:
+  send-email-to-speakers:
+    handler: src/index.handler
+    events:
+      - s3:
+          bucket: "carbon-conference-events-bucket"
+          event: s3:ObjectCreated:Put

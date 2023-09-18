@@ -32,3 +32,6 @@ yarn-error.log*
 # archive
 .zip
 **/*.zip
+
+# Serverless directories
+.serverless
