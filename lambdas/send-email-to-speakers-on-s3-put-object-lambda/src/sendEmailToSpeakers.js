@@ -4,7 +4,7 @@ const sesClient = new SESv2Client({ region: process.env.REGION });
 
 export const sendEmailToSpeakers = (events) => {
     for(const event of events) {
-        sesClient.send(createSendEmailCommand(event.speakerEmail, event.title, event.date, event.hour));   
+        sesClient.send(createSendEmailCommand(event.speakerEmail, event.title, event.date, event.hour));
     }
 };
 
@@ -17,7 +17,7 @@ const createSendEmailCommand = (speakerEmail, title, date, hour) => {
           ]
         },
         Content: {
-          Simple: {  
+          Simple: {
             Subject: {
                 Charset: "UTF-8",
                 Data: `Confirmation de votre conférence ${title}`,
